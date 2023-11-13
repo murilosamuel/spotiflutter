@@ -1,0 +1,83 @@
+name: spotiflutter
+description: An app developed to spotify lovers.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  cached_network_image: ^3.3.0
+  dartz: ^0.10.1
+  flutter_dotenv: ^5.1.0
+  flutter_flavorizr: ^2.2.1
+  flutter_secure_storage: ^8.1.0
+  flutter_svg: ^2.0.9
+  get_it: ^7.6.4
+  injectable: ^2.3.2
+  intl: ^0.17.0
+  hive: ^2.2.3
+  http: ^1.1.0
+  infinite_scroll_pagination: ^4.0.0
+  internet_connection_checker: ^1.0.0+1
+  oauth2_client: ^3.2.2
+  path_provider: ^2.1.1
+  spotiflutter_auth:
+    git:
+      url: 'https://github.com/murilosamuel/spotiflutter_auth.git'
+      ref: v0.0.1
+
+  url_launcher: ^6.2.1
+
+dependency_overrides:
+  intl: ^0.18.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  injectable_generator: ^2.4.1
+  build_runner: ^2.4.6
+
+flavorizr:
+  flavors:
+    development:
+      app:
+        name: "Spotify Dev"
+      android:
+        applicationId: "com.spotflutter.dev"
+      ios:
+        bundleId: "com.spotflutter.dev"
+    staging:
+      app:
+        name: "Spotify Staging"
+      android:
+        applicationId: "com.spotflutter.staging"
+      ios:
+        bundleId: "com.spotflutter.staging"
+    production:
+      app:
+        name: "Spotify Prod"
+      android:
+        applicationId: "com.spotflutter.prod"
+      ios:
+        bundleId: "com.spotflutter.prod"
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - .env
+    - assets/images/svg/
+
+  fonts:
+    - family: Proxima Nova
+      fonts:
+        - asset: assets/fonts/proxima/proxima-nova-regular.ttf
+    - family: Proxima Nova Bold
+      fonts:
+        - asset: assets/fonts/proxima/proxima-nova-bold.ttf

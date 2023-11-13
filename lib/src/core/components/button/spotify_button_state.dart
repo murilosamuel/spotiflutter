@@ -1,0 +1,4 @@
+enum SpotifyButtonState {
+  initial,
+  loading
+}
